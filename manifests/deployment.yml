@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: jjanpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jjanpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: jjanpipelinesjavascriptdocker 
+          image: jay123containerreg.azurecr.io/jjanpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
